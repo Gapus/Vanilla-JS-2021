@@ -1,7 +1,11 @@
-const amIFat=null;
-let somthing;
-console.log(somthing,amIFat);
-somthing =true;
-console.log(somthing,amIFat);
-somthing =false;
-console.log(somthing,amIFat);
+const daysOfWeek = ["mon","tue","wed","thu","fri","sat"];
+
+// Gat Item
+console.log(daysOfWeek);
+
+// Add Item
+daysOfWeek.push("sun");
+
+console.log(daysOfWeek);
+
+console.log(daysOfWeek[2]);
