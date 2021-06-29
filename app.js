@@ -1,11 +1,7 @@
-const a = 10;
-const b = 2;
-let myName = "Gapus"
-
-console.log(a+b);
-console.log(a*b);
-console.log(a/b);
-console.log("Hello "+myName);
-
-myName="kim"
-console.log("Hello "+myName);
+const amIFat=null;
+let somthing;
+console.log(somthing,amIFat);
+somthing =true;
+console.log(somthing,amIFat);
+somthing =false;
+console.log(somthing,amIFat);
