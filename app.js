@@ -1,9 +1,7 @@
-const player={
-    name:"Kim",
-    sayHello:function(PersonsName){
-        console.log("Hello! " +  PersonsName);
+const calculator={
+    add:function(a,b){
+        console.log(a+b);
     }
 };
 
-console.log(player.name);
-player.sayHello("Kimgdas");
+calculator.add(5,6);
