@@ -6,6 +6,7 @@ const loginInput= document.querySelector("#login-form input");
 const greeting= document.querySelector("#greeting");
 
 const HIDDEN_CLAASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
 function onLoginSubmit(evnet){
     evnet.preventDefault();
@@ -15,12 +16,24 @@ function onLoginSubmit(evnet){
 
     //"Kim " + username == `kim ${username}`
 
-    localStorage.setItem("username",username);
-    
-    greeting.innerText = `kim ${username}`;
-    greeting.classList.remove(HIDDEN_CLAASSNAME)
+    localStorage.setItem(USERNAME_KEY,username);
+
+    paintGreetings(username);
+}
+
+
+function paintGreetings(username){
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLAASSNAME);
 }
 
 
 
-loginForm.addEventListener("submit",onLoginSubmit);
+const saveUsername = localStorage.getItem(USERNAME_KEY);
+
+if(saveUsername === null){
+    loginForm.classList.remove(HIDDEN_CLAASSNAME);
+    loginForm.addEventListener("submit",onLoginSubmit);
+} else{
+    paintGreetings(saveUsername);
+}
