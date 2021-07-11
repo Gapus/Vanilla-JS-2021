@@ -1,3 +1,17 @@
 .hidden {
   display: none;
 }
+#clock,
+#todo-form,
+#greeting,
+#quotes,
+#weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+#quotes,
+#weather {
+  font-size: 28px;
+}
